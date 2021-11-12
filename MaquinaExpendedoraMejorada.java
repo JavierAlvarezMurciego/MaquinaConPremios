@@ -16,6 +16,7 @@ public class MaquinaExpendedoraMejorada {
     private boolean laMaquinaDaPremios;
     // Número máximo de billetes vendidos
     private int numMaxBilletesVendidos;
+   
 
     /**
      * Crea una maquina expendedora de billetes de tren con el 
@@ -90,9 +91,12 @@ public class MaquinaExpendedoraMejorada {
                 numeroBilletesVendidos = numeroBilletesVendidos +1 ;
 
                 if (laMaquinaDaPremios == true){
-                    float billetePremiado = precioBillete * 0.1F;
-                    System.out.println("# Descuento del 10%  de cualquier producto de Mercadona"  + billetePremiado + " euros.");
-                } 
+                    int resto = numeroBilletesVendidos%3;
+                    if(resto == 0){
+                        float billetePremiado = precioBillete * 0.1F;
+                        System.out.println("# Descuento del 10%  de cualquier producto de Mercadona"  + billetePremiado + " euros.");
+                    }
+                }
             }
 
         }
